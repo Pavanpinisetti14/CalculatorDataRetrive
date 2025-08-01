@@ -24,6 +24,9 @@ const calculatorSchema = new mongoose.Schema({
 
 const Calculator = mongoose.model("Calculator", calculatorSchema);
 
+app.get("/",(res,req)=>{
+  res.send("Working");
+});
 app.get("/DataRetrieve", async (req, res) => {
   try {
     const entries = await Calculator.find();
