@@ -5,7 +5,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/DataRetrieve")
+    fetch("https://calculatordataretrive.onrender.com/DataRetrieve")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
